@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+	/* text */
+	--Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+	--Soft-red: hsl(14, 88%, 65%);
+	--Very-dark-grayish-blue: hsl(237, 12%, 33%);
+	--Dark-grayish-blue: hsl(240, 6%, 50%);
+	/* 
+  Dividers
+  - Light grayish blue: hsl(240, 5%, 91%) */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	height: 100vh;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 12px;
+	color: var(--Very-dark-desaturated-blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 30px;
+	width: 80%;
+	padding: 2em;
+}
+
+.image-container {
+	height: 200px;
+	margin-top: -140px;
+	text-align: center;
+}
+
+.mobile-img,
+.desktop-img {
+	height: 100%;
+}
+
+.desktop-img {
+	display: none;
+}
+
+h1 {
+	text-align: center;
+	margin: 1em 0;
+}
+
+.faq {
+	font-size: 15px;
+}
+
+.question {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid hsl(240, 5%, 91%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.answer {
+	display: none;
+}
+
+.faq.active {
+	border-bottom: 1px solid hsl(240, 5%, 91%);
+	margin-bottom: 1em;
+}
+
+.active .question {
+	font-weight: 700;
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+.active .answer {
+	display: block;
+	width: 90%;
+	padding-bottom: 1em;
+	color: var(--Dark-grayish-blue);
+}
+
+.active img {
+	transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 1200px) {
+	.container {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1000px;
+		gap: 2em;
+	}
+	.image-container,
+	.faqs {
+		height: 100%;
+		margin-right: 1em;
+	}
+	.image-container {
+		margin: 0;
+		margin-left: -70px;
+	}
+	.faqs {
+		width: 50%;
+	}
+	h1 {
+		text-align: start;
+	}
+	.desktop-img {
+		display: block;
+	}
+	.mobile-img {
+		display: none;
+	}
+	.box {
+		margin-top: -220px;
+		margin-left: -55px;
+	}
+}
